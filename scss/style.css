@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e5eaf5;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+}
+
+nav {
+  background-color: #a0d2eb;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+}
+nav .navbar-brand img {
+  max-height: 30px;
+}
+nav .navbar-toggler-icon {
+  border: 1px solid white;
+}
+nav .nav-item {
+  margin-right: 10px;
+}
+nav .nav-item .nav-link {
+  color: white;
+}
+nav .nav-item .nav-link:hover {
+  color: #ecf0f1;
+}
+
+.main-content {
+  padding: 150px;
+}
+.main-content h1 {
+  font-size: 100px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.main-content p {
+  font-size: 40px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.main-content .car-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main-content .car-images .image-link {
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.main-content .car-images .image-link:hover img {
+  transform: scale(1.1);
+}
+.main-content .car-images .image-link:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  font-size: 1em;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+.main-content .car-images .image-link img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skyline {
+  image-orientation: unset;
+}
+
+footer {
+  background-color: #d0bdf4;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+footer .social-media img {
+  max-width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+footer p {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+  }
+  .nav-links li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    margin-top: 10px;
+  }
+  .nav-links li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
